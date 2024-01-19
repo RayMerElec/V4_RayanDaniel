@@ -32,7 +32,7 @@ public class Area {
 		System.out.println("Área de la circunferencia: " + area);
 		System.out.println("Perímetro de la circunferencia: " + perimetro);
 
-		// Solicitar al usuario que ingrese la altura del cilindro
+		// solicitar al usuario que ingrese la altura del cilindro
 		System.out.print("Ingrese la altura del cilindro: ");
 		double alturaCilindro = scanner.nextDouble();
 
