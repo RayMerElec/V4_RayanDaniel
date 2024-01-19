@@ -31,6 +31,16 @@ public class Area {
 		// Mostrar los resultados
 		System.out.println("Área de la circunferencia: " + area);
 		System.out.println("Perímetro de la circunferencia: " + perimetro);
+		
+		 // Solicitar al usuario que ingrese la altura del cilindro
+        System.out.print("Ingrese la altura del cilindro: ");
+        double alturaCilindro = scanner.nextDouble();
+
+        // Calcular el área total del cilindro
+        double areaCilindro = calcularAreaCilindro(radio, alturaCilindro);
+
+        // Mostrar el resultado
+        System.out.println("Área total del cilindro: " + areaCilindro);
 
 	}
 
@@ -43,5 +53,9 @@ public class Area {
 	public static double calcularPerimetro(double radio) {
 		return 2 * Math.PI * radio;
 	}
-
+	 public static double calcularAreaCilindro(double radio, double altura) {
+	        double areaBase = Math.PI * Math.pow(radio, 2);
+	        double areaLateral = 2 * Math.PI * radio * altura;
+	        return 2 * areaBase + areaLateral;
+	    }
 }
