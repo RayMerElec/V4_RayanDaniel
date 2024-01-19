@@ -65,6 +65,15 @@ public class Area {
 
 		// Mostrar el resultado
 		System.out.println("Área del cubo: " + areaCubo);
+		 // Solicitar al usuario que ingrese el lado del cubo
+        System.out.print("Ingrese el lado del cubo: ");
+        double ladooCubo = scanner.nextDouble();
+
+        // Calcular el volumen del cubo
+        double volumenCubo = calcularVolumenCubo(ladooCubo);
+
+        // Mostrar el resultado
+        System.out.println("Volumen del cubo: " + volumenCubo);
 	}
 
 	// Función para calcular el área de la circunferencia
@@ -90,5 +99,8 @@ public class Area {
 	public static double calcularAreaCubo(double lado) {
 		return 6 * Math.pow(lado, 2);
 	}
+	public static double calcularVolumenCubo(double lado) {
+        return Math.pow(lado, 3);
+    }
 
 }
