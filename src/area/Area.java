@@ -56,6 +56,15 @@ public class Area {
 		// Mostrar el resultado
 		System.out.println("Área del rectángulo: " + area);
 
+		// Solicitar al usuario que ingrese el lado del cubo
+		System.out.print("Ingrese el lado del cubo: ");
+		double ladoCubo = scanner.nextDouble();
+
+		// Calcular el área del cubo
+		double areaCubo = calcularAreaCubo(ladoCubo);
+
+		// Mostrar el resultado
+		System.out.println("Área del cubo: " + areaCubo);
 	}
 
 	// Función para calcular el área de la circunferencia
@@ -78,4 +87,8 @@ public class Area {
 	public static double calcularAreaRectangulo(double baseRec, double alturaRec) {
 		return baseRec * alturaRec;
 	}
+	public static double calcularAreaCubo(double lado) {
+		return 6 * Math.pow(lado, 2);
+	}
+
 }
