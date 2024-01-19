@@ -31,16 +31,30 @@ public class Area {
 		// Mostrar los resultados
 		System.out.println("Área de la circunferencia: " + area);
 		System.out.println("Perímetro de la circunferencia: " + perimetro);
-		
-		 // Solicitar al usuario que ingrese la altura del cilindro
-        System.out.print("Ingrese la altura del cilindro: ");
-        double alturaCilindro = scanner.nextDouble();
 
-        // Calcular el área total del cilindro
-        double areaCilindro = calcularAreaCilindro(radio, alturaCilindro);
+		// Solicitar al usuario que ingrese la altura del cilindro
+		System.out.print("Ingrese la altura del cilindro: ");
+		double alturaCilindro = scanner.nextDouble();
 
-        // Mostrar el resultado
-        System.out.println("Área total del cilindro: " + areaCilindro);
+		// Calcular el área total del cilindro
+		double areaCilindro = calcularAreaCilindro(radio, alturaCilindro);
+
+		// Mostrar el resultado
+		System.out.println("Área total del cilindro: " + areaCilindro);
+
+		// Solicitar al usuario que ingrese la base del rectángulo
+		System.out.print("Ingrese la base del rectángulo: ");
+		double baseRec = scanner.nextDouble();
+
+		// Solicitar al usuario que ingrese la altura del rectángulo
+		System.out.print("Ingrese la altura del rectángulo: ");
+		double alturaRec = scanner.nextDouble();
+
+		// Calcular el área del rectángulo
+		double areaRec = calcularAreaRectangulo(baseRec, alturaRec);
+
+		// Mostrar el resultado
+		System.out.println("Área del rectángulo: " + area);
 
 	}
 
@@ -53,9 +67,15 @@ public class Area {
 	public static double calcularPerimetro(double radio) {
 		return 2 * Math.PI * radio;
 	}
-	 public static double calcularAreaCilindro(double radio, double altura) {
-	        double areaBase = Math.PI * Math.pow(radio, 2);
-	        double areaLateral = 2 * Math.PI * radio * altura;
-	        return 2 * areaBase + areaLateral;
-	    }
+
+	public static double calcularAreaCilindro(double radio, double altura) {
+		double areaBase = Math.PI * Math.pow(radio, 2);
+		double areaLateral = 2 * Math.PI * radio * altura;
+		return 2 * areaBase + areaLateral;
+	}
+	
+	// Función para calcular el área del rectángulo
+	public static double calcularAreaRectangulo(double baseRec, double alturaRec) {
+		return baseRec * alturaRec;
+	}
 }
